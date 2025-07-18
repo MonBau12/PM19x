@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+/*import { View, Text, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function Profile() {
@@ -30,4 +30,26 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: 'green',
   },
+});*/
+
+
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+
+export default function Profile({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Pantalla de Perfil</Text>
+      <Button title="Detalles del usuario" onPress={() => navigation.navigate('Detalle')} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, justifyContent: 'center', alignItems: 'center'
+  },
+  text: {
+    fontSize: 24, fontWeight: 'bold', marginBottom: 20
+  }
 });
